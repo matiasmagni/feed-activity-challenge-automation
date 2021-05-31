@@ -1,0 +1,10 @@
+{
+    "URL": "/comments",
+    "commentName": ".commentName",
+    "commentEmail": ".commentEmail",
+    "commentBody": ".commentBody",
+    "inputName": "#name",
+    "inputEmail": "#email",
+    "inputComments": "#comments",
+    "buttonPublish": "#addComment"
+}

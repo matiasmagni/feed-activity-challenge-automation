@@ -1,5 +1,6 @@
 {
     "URL": "/",
-    "SEARCH_FIELD": "#search-key",
-    "SEARCH_BUTTON": ".search-button"
+    "commentsLink": "#commentLink-{postId}",
+    "postTitle": ".postTitle",
+    "postBody": ".postBody"
 }

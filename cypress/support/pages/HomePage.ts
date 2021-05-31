@@ -16,16 +16,15 @@ export default class HomePage extends BasePage {
         });
     }
 
-    public getSearchField(): Cypress.Chainable {
-        return cy.get(this.selectors.SEARCH_FIELD);
+    public clickCommentsLink(postId: any): Cypress.Chainable {
+        return cy.get(this.selectors.commentsLink.replace('{postId}', postId)).click();
     }
 
-    public getSearchButton(): Cypress.Chainable {
-        return cy.get(this.selectors.SEARCH_BUTTON);
+    public getPostTitles(): Cypress.Chainable {
+        return cy.get(this.selectors.postTitle);
     }
 
-    public searchFor(text: string): void {
-        this.getSearchField().type(text);
-        this.getSearchButton().click();
+    public getPostBodies(): Cypress.Chainable {
+        return cy.get(this.selectors.postBody);
     }
 }

@@ -1,9 +1,9 @@
 {
   "projectId": "8dpnan",
-  "baseUrl": "https://www.aliexpress.com",
+  "baseUrl": "http://localhost:3000",
   "testFiles": "**/*.{feature,features}",
-  "viewportWidth": 1024,
-  "viewportHeight": 800,
+  "viewportWidth": 1366,
+  "viewportHeight": 768,
   "chromeWebSecurity": false,
   "retries": {
     "runMode": 2,
