@@ -6,5 +6,6 @@
     "inputName": "#name",
     "inputEmail": "#email",
     "inputComments": "#comments",
-    "buttonPublish": "#addComment"
+    "buttonPublish": "#addComment",
+    "message": "#message"
 }

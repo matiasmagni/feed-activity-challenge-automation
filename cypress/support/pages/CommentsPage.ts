@@ -13,6 +13,10 @@ export default class CommentsPage extends BasePage {
         return cy.get(this.selectors.commentBody);
     }
 
+    public getMessage(): Cypress.Chainable {
+        return cy.get(this.selectors.message);
+    }
+
     public clickOnPublish() {
         cy.get(this.selectors.buttonPublish).click();
     }

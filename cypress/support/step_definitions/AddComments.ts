@@ -23,4 +23,5 @@ Then(`the user visualize the new added comment correctly`, () => {
   page.getCommentNames().last().contains(<string> localStorage.getItem('name'));
   page.getCommentEmails().last().contains(<string> localStorage.getItem('email'));
   page.getCommentBodies().last().contains(<string> localStorage.getItem('comment'));
+  page.getMessage().contains('Comment was added successfully!');
 });
