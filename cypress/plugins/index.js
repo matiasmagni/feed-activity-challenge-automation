@@ -1,8 +1,10 @@
+/* eslint global-require: "off" */
 const webpack = require('@cypress/webpack-preprocessor');
 
-module.exports = on => {
+module.exports = (on) => {
   const options = {
-    webpackOptions: require('../../webpack.config.js')
+    /* eslint import/extensions: "off" */
+    webpackOptions: require('../../webpack.config.js'),
   };
   on('file:preprocessor', webpack(options));
 };

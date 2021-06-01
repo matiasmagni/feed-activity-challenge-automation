@@ -14,21 +14,18 @@
 // ***********************************************************
 
 // Import commands.js using ES2015 syntax:
-import './commands'
+import './commands';
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
-
-Cypress.on('uncaught:exception', (err, runnable) => {
-    // Returning false here prevents Cypress from failing the test
-    return false;
-});
+// Returning false here prevents Cypress from failing the test
+Cypress.on('uncaught:exception', () => false);
 
 before(() => {
-    const metadata = {
-        platform: Cypress.platform,
-        browser: Cypress.browser.displayName,
-        browserVersion: Cypress.browser.version
-    };
-    cy.writeFile("cypress/reports/metadata.json", metadata);
+  const metadata = {
+    platform: Cypress.platform,
+    browser: Cypress.browser.displayName,
+    browserVersion: Cypress.browser.version,
+  };
+  cy.writeFile('cypress/reports/metadata.json', metadata);
 });
