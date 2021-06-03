@@ -17,19 +17,31 @@ export default class CommentsPage extends BasePage {
         return cy.get(this.selectors.message);
     }
 
+    public getEmailErrorMessage(): Cypress.Chainable {
+        return cy.get(this.selectors.emailErrorMessage);
+    }
+
     public clickOnPublish() {
         cy.get(this.selectors.buttonPublish).click();
     }
 
     public fillComment(comment: string) {
-        cy.get(this.selectors.inputComments).type(comment);
+        this.type(cy.get(this.selectors.inputComments), comment);        
     }
 
     public fillEmail(email: string) {
-        cy.get(this.selectors.inputEmail).type(email);
+        this.type(cy.get(this.selectors.inputEmail), email);
     }
 
     public fillName(name: string) {
-        cy.get(this.selectors.inputName).type(name);
+        this.type(cy.get(this.selectors.inputName), name);
+    }
+
+    private type(element: Cypress.Chainable, text: string) {
+        if (text.length > 0) {
+            element.type(text);
+        } else {
+            element.clear();
+        }
     }
 }

@@ -7,5 +7,6 @@
     "inputEmail": "#email",
     "inputComments": "#comments",
     "buttonPublish": "#addComment",
-    "message": "#message"
+    "message": "#message",
+    "emailErrorMessage": "#emailErrorMsg"
 }
